@@ -9,7 +9,7 @@ Sub PreencherWordComDados()
     On Error GoTo Erro ' Tratamento de erro
 
     ' Caminho do seu modelo Word
-    caminhoModelo = "C:\Users\thiago.correia\Downloads\Teste_VBA\0.Termo_padrao.docx" ' <-- ajuste esse caminho
+    caminhoModelo = "caminho\0.Termo_padrao.docx" ' <-- ajuste esse caminho
 
     ' Cria instância do Word
     Set wdApp = CreateObject("Word.Application")
@@ -72,7 +72,7 @@ Sub PreencherWordComDados()
             .Execute Replace:=2
         End With
 
-        nomeArquivo = "C:\Users\thiago.correia\Downloads\Teste_VBA\" & "Termo-Padrao_" & Replace(Nome, " ", "_") & ".docx"
+        nomeArquivo = "caminho" & "Termo-Padrao_" & Replace(Nome, " ", "_") & ".docx"
         wdDoc.SaveAs2 nomeArquivo
         wdDoc.Close False
 
